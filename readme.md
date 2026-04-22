@@ -1,6 +1,6 @@
 # 🌿 Lumina | Catálogo de Agendamento Estratégico para Estética
 
-> **🔗 Acesse o projeto ao vivo:** [CLIQUE AQUI PARA TESTAR O LUMINA]https://alananery-dev.github.io/Projeto3-Dashboard-Lumina/
+> **🔗 Acesse o projeto ao vivo:** [CLIQUE AQUI PARA TESTAR O LUMINA](https://alananery-dev.github.io/Projeto3-Dashboard-Lumina/)
 
 O **Lumina** é uma solução digital de alto padrão desenvolvida para elevar o posicionamento de mercado de clínicas de estética, spas e centros de beleza. Mais do que um site, é uma ferramenta de conversão focada em experiência do usuário e agilidade comercial.
 
