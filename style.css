@@ -1,0 +1,382 @@
+/* =========================================
+   1. FONTES E CORES (PALETA CHAMPAGNE & CARBON)
+   ========================================= */
+@import url('https://fonts.googleapis.com/css2?family=Cormorant+Garamond:wght@400;500;600&family=Montserrat:wght@300;400;500;700&display=swap');
+
+:root {
+    --primary: #A68B67;       /* Bronze Champagne */
+    --primary-light: #C5B299;
+    --dark: #0F0F0F;          /* Preto Profundo */
+    --bg-site: #F4F2F0;       /* Areia Claríssimo */
+    --white: #FFFFFF;
+    --shadow-card: 0 20px 50px rgba(0, 0, 0, 0.08);
+    --transition: all 0.5s cubic-bezier(0.19, 1, 0.22, 1);
+}
+
+/* =========================================
+   2. RESET E REGRAS GLOBAIS
+   ========================================= */
+* { margin: 0; padding: 0; box-sizing: border-box; }
+
+body {
+    font-family: 'Montserrat', sans-serif;
+    background-color: var(--bg-site);
+    color: var(--dark);
+    line-height: 1.6;
+    overflow-x: hidden;
+}
+
+/* =========================================
+   3. HERO (MAIS ROBUSTO)
+   ========================================= */
+.hero {
+    height: 60vh;
+    background: linear-gradient(rgba(0,0,0,0.4), rgba(0,0,0,0.4)), 
+                url('https://images.unsplash.com/photo-1560750588-73207b1ef5b8?w=1600');
+    background-size: cover;
+    background-position: center;
+    background-attachment: fixed; /* Efeito Parallax elegante */
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    color: var(--white);
+}
+
+.hero h1 {
+    font-family: 'Cormorant Garamond', serif;
+    font-size: clamp(3rem, 7vw, 5rem);
+    font-weight: 500;
+    margin-bottom: 20px;
+    letter-spacing: -1px;
+}
+
+/* =========================================
+   4. BUSCA E FILTROS (MOLDURA PROFISSIONAL)
+   ========================================= */
+.search-container {
+    max-width: 800px;
+    margin: -45px auto 50px;
+    padding: 0 20px;
+}
+
+#searchInput {
+    width: 100%;
+    padding: 28px 40px;
+    border: none;
+    background: var(--white);
+    font-size: 1.1rem;
+    color: var(--dark);
+    box-shadow: 0 30px 60px rgba(0,0,0,0.1);
+    border-radius: 4px;
+    outline: none;
+}
+
+.categories {
+    display: flex;
+    justify-content: center;
+    gap: 15px;
+    margin-bottom: 70px;
+}
+
+.cat-btn {
+    padding: 12px 30px;
+    background: var(--white);
+    border: 1px solid #E0DEDC;
+    color: var(--dark);
+    font-size: 0.75rem;
+    font-weight: 600;
+    text-transform: uppercase;
+    letter-spacing: 2px;
+    cursor: pointer;
+    transition: var(--transition);
+}
+
+.cat-btn.active, .cat-btn:hover {
+    background: var(--dark);
+    color: var(--white);
+    border-color: var(--dark);
+}
+
+/* =========================================
+   5. CARDS DE SERVIÇO (ESTRUTURADOS E LUXUOSOS)
+   ========================================= */
+.container { max-width: 1300px; margin: 0 auto; padding: 0 40px; }
+
+.services-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(380px, 1fr));
+    gap: 40px;
+}
+
+.service-card {
+    background: var(--white);
+    border-radius: 8px; /* Leve curvatura para modernidade */
+    overflow: hidden;
+    box-shadow: var(--shadow-card);
+    transition: var(--transition);
+    border: 1px solid rgba(0,0,0,0.02);
+    display: flex;
+    flex-direction: column;
+}
+
+.service-card:hover {
+    transform: translateY(-15px);
+    box-shadow: 0 40px 80px rgba(0,0,0,0.12);
+}
+
+.service-img {
+    height: 300px;
+    background-size: cover;
+    background-position: center;
+    position: relative;
+}
+
+/* Overlay sutil na imagem */
+.service-img::after {
+    content: '';
+    position: absolute;
+    top: 0; left: 0; width: 100%; height: 100%;
+    background: linear-gradient(to bottom, transparent 60%, rgba(0,0,0,0.3));
+}
+
+.service-info {
+    padding: 40px;
+    flex-grow: 1;
+    display: flex;
+    flex-direction: column;
+}
+
+.service-info h3 {
+    font-family: 'Cormorant Garamond', serif;
+    font-size: 2rem;
+    font-weight: 600;
+    margin-bottom: 15px;
+    color: var(--dark);
+}
+
+.service-info p {
+    font-size: 0.95rem;
+    color: #555;
+    margin-bottom: 25px;
+    font-weight: 300;
+}
+
+.service-details {
+    background: #F9F8F7;
+    padding: 15px;
+    margin-bottom: 25px;
+    border-left: 3px solid var(--primary);
+}
+
+.service-details summary {
+    font-weight: 700;
+    font-size: 0.7rem;
+    text-transform: uppercase;
+    letter-spacing: 1.5px;
+    color: var(--primary);
+    cursor: pointer; 
+
+}
+
+.service-details li {
+    list-style: none;
+}
+
+.service-footer {
+    margin-top: auto;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding-top: 25px;
+    border-top: 1px solid #EEE;
+}
+
+.price {
+    font-family: 'Cormorant Garamond', serif;
+    font-size: 1.8rem;
+    font-weight: 600;
+    color: var(--dark);
+}
+
+.add-btn {
+    padding: 15px 35px;
+    background: var(--dark);
+    color: var(--white);
+    border: none;
+    border-radius: 4px;
+    font-size: 0.75rem;
+    font-weight: 700;
+    text-transform: uppercase;
+    letter-spacing: 1px;
+    cursor: pointer;
+    transition: var(--transition);
+}
+
+.add-btn:hover {
+    background: var(--primary);
+    transform: scale(1.05);
+}
+
+.add-btn.selected {
+    background: #ae2727; /* Verde esmeralda para sucesso */
+}
+
+/* ============================================================
+   6. CARRINHO FLUTUANTE (DESIGN MINIMALISTA)
+   ============================================================ */
+#cart-wrapper {
+    position: fixed;
+    bottom: 40px;
+    right: 40px;
+    z-index: 1000;
+}
+
+.cart-button {
+    width: 60px;
+    height: 60px;
+    background: var( --dark);
+    color: var(--white);
+    border-radius: 50%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    cursor: pointer;
+    transition: var(--transition);
+}
+
+.cart-button:hover {
+    background: var(--accent);
+    transform: translateY(-5px);
+}
+
+.badge {
+    position: absolute;
+    top: 0;
+    right: 0;
+    background: var(--primary);
+    width: 22px;
+    height: 22px;
+    border-radius: 50%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-size: 0.65rem;
+    font-weight: bold;
+    border: 2px solid var(--white);
+}
+
+/* Painel do Carrinho */
+.cart-panel {
+    display: none;
+    position: absolute;
+    bottom: 80px;
+    right: 0;
+    width: 340px;
+    background: var(--white);
+    box-shadow: 0 40px 100px rgba(0,0,0,0.12);
+    padding: 40px;
+    border: 1px solid #F0F0F0;
+}
+
+.panel-header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-bottom: 30px;
+}
+
+.panel-header h3 {
+    font-family: 'Cormorant Garamond', serif;
+    font-size: 1.5rem;
+    font-style: italic;
+}
+
+.panel-header button {
+    background: none;
+    border: none;
+    font-size: 1rem;
+    cursor: pointer;
+}
+
+.date-selection label {
+    font-size: 0.6rem;
+    text-transform: uppercase;
+    letter-spacing: 2px;
+    color: var(--accent);
+    display: block;
+    margin-bottom: 10px;
+}
+
+#appointmentDate {
+    width: 100%;
+    padding: 12px;
+    border: 1px solid #F0F0F0;
+    font-family: 'Montserrat', sans-serif;
+    font-size: 0.8rem;
+    margin-bottom: 25px;
+}
+
+.panel-footer {
+    text-align: center;
+}
+
+#total-price-panel {
+    display: block;
+    font-family: 'Cormorant Garamond', serif;
+    font-size: 1.8rem;
+    margin-bottom: 20px;
+}
+
+.checkout-btn {
+    width: 100%;
+    background: var(--primary);
+    color: var(--white);
+    border: none;
+    border-radius: 4px;
+    padding: 18px;
+    font-size: 0.7rem;
+    text-transform: uppercase;
+    letter-spacing: 3px;
+    font-weight: 600;
+    cursor: pointer;
+    transition: var(--transition);
+}
+
+.checkout-btn:hover {
+    background: var(--primary-light);
+    transform: scale(1.05);
+}
+
+.clear-btn {
+    display: block;
+    margin: 20px auto 0;
+    background: none;
+    border: none;
+    color: var(--text-muted);
+    font-size: 0.6rem;
+    text-transform: uppercase;
+    letter-spacing: 1px;
+    cursor: pointer;
+    text-decoration: underline;
+}
+/* =========================================
+   7. ANIMAÇÕES
+   ========================================= */
+@keyframes bounce {
+    0%, 100% { transform: scale(1); }
+    50% { transform: scale(1.2); }
+}
+.bounce { animation: bounce 0.4s ease; }
+
+@keyframes fadeIn {
+    from { opacity: 0; transform: translateY(40px); }
+    to { opacity: 1; transform: translateY(0); }
+}
+
+/* Responsividade */
+@media (max-width: 768px) {
+    .services-grid { grid-template-columns: 1fr; }
+    .hero h1 { font-size: 3rem; }
+    .cart-panel { width: 320px; right: -20px; }
+}

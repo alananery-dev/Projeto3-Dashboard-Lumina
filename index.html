@@ -1,0 +1,68 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Lumina | Estética & Bem-Estar</title>
+    <link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:wght@600&family=Montserrat:wght@300;400;600&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="style.css">
+    <link rel="shortcut icon" href="img/lumina.png" type="image/x-icon">
+</head>
+<body>
+
+    <header class="hero">
+        <nav class="navbar">
+            <div class="logo">LUMINA</div>
+        </nav>
+        <div class="hero-content">
+            <h1>Sua melhor versão começa aqui</h1>
+            <p>Escolha os procedimentos e agende via WhatsApp</p>
+        </div>
+    </header>
+
+    <main class="container">
+        
+        <div class="search-container">
+            <input type="text" id="searchInput" placeholder="Buscar procedimento (ex: Massagem...)" onkeyup="searchService()">
+        </div>
+
+        <div class="categories">
+            <button class="cat-btn active" data-filter="todos">Todos</button>
+            <button class="cat-btn" data-filter="facial">Facial</button>
+            <button class="cat-btn" data-filter="corporal">Corporal</button>
+        </div>
+
+        <section class="services-grid" id="services-grid">
+        </section>
+    </main>
+
+   <div id="cart-wrapper">
+        <div class="cart-button" onclick="toggleCart()" id="cartButton">
+            <span class="cart-icon">🛒</span>
+            <span id="cart-count" class="badge">0</span>
+        </div>
+
+        <div class="cart-panel" id="cartPanel">
+            <div class="panel-header">
+                <h3>Seu Agendamento</h3>
+                <button onclick="toggleCart()">✕</button>
+            </div>
+            
+            <div class="panel-content">
+                <div id="items-list"></div> <div class="date-selection">
+                    <label>Data e hora desejada:</label>
+                    <input type="datetime-local" id="appointmentDate">
+                </div>
+                <div class="panel-footer">
+                    <strong id="total-price-panel">Total: R$ 0</strong>
+                    <button class="checkout-btn" onclick="sendWhatsApp()">Finalizar Agendamento</button>
+                    <button class="clear-btn" onclick="clearCart()">Limpar Tudo</button>
+                </div>
+            </div>
+        </div>
+    </div>
+    
+
+    <script src="dados.js"></script> <script src="script.js"></script> </body>
+</body>
+</html>
