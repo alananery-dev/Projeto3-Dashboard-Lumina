@@ -43,4 +43,4 @@ Construído com as melhores práticas de desenvolvimento atual:
 - **Lógica Customizável:** Estrutura preparada para receber novos serviços e categorias conforme o crescimento do negócio.
 
 ---
-**Desenvolvido com foco em resultados por [Seu Nome Aqui].**
+**Desenvolvido com foco em resultados por AlanaNery-Dev.**
